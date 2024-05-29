@@ -170,12 +170,14 @@ body {
 
 #skill {
     width: 25%;
-    height: 200px;
+    height: 400px;
 	position: absolute;
-	top: 105%;
+	top: 85%;
 	left: 8%;
     margin: 0 auto 2%;
     background-color: rgba(2, 19, 43, 0.804);
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+
