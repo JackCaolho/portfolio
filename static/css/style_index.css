@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* Header */
 .large-header {
@@ -40,6 +41,7 @@
 		 font-size: 3em;
 	}
 }
+
 
 
 
@@ -127,168 +129,356 @@ body {
     line-height: 1.6;
 }
 
+
+.container {
+    display: flex;
+    width: 85%;
+    justify-content: space-between; /* Ensure space between the elements */
+    align-items: flex-start; /* Align the top of the elements */
+    padding: 50px; /* Add padding to the container */
+    margin-top: 400px; /* Adjust this value to move the container down */
+    position: relative; /* Ensure it is positioned correctly relative to other elements */
+    z-index: 1; /* Ensure it is above other elements if necessary */
+}
+
 #sobre {
-    width: 25%;
-    height: 200px;
-	position: absolute;
-	top: 55%;
-	left: 8%;
-    margin: 0 auto 2%;
+    width: 35%;
+    height: auto;
     background-color: rgba(59, 18, 59, 0.8);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
 }
 
-
-
-
-
-
-
-#projetos .slides {
-    padding: 0;
-    top: 120px;
-    width: 850px;
-    left: 200px;
-    height: 650px;
-    display: block;
-    margin: 0 auto 2%;
-    position: relative;
-    
-    
-}
-
-#projetos .slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
-
-#projetos .slides input {
-    display: none;
-}
-
-#projetos .slide-container {
-    display: block;
-}
-
-#projetos .slide {
-    top: 465px;
-    opacity: 0;
-    width: 850px;
-    height: 650px;
-    display: block;
-    position: absolute;
-    transform: scale(0);
-    transition: all .7s ease-in-out;
-}
-
-#projetos .slide img {
-    width: 100%;
-    height: 100%;
-}
-
-#projetos .nav label {
-    top: 465px;
-    width: 200px;
-    height: 100%;
-    display: none;
-    position: absolute;
-    opacity: 0;
-    z-index: 9;
-    cursor: pointer;
-    transition: opacity .2s;
-    color: #FFF;
-    font-size: 156pt;
+.sobre-title {
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    line-height: 380px;
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
-    text-shadow: 0px 0px 15px rgb(119, 119, 119);
-    
+    margin-bottom: 20px;
+    color: #fff;
 }
 
-#projetos .slide:hover + .nav label {
-    opacity: 0.5;
+.sobre-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+    text-align: justify;
 }
-
-#projetos .nav label:hover {
-    opacity: 1;
-}
-
-#projetos .nav .next {
-    right: 0;
-}
-
-#projetos input:checked + .slide-container .slide {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 1s ease-in-out;
-}
-
-#projetos input:checked + .slide-container .nav label {
-    display: block;
-}
-
-#projetos .nav-dots {
-    width: 100%;
-    top: 1100px;
-    bottom: 9px;
-    height: 11px;
-    display: block;
-    position: absolute;
-    text-align: center;
-}
-
-#projetos .nav-dots .nav-dot {
-    top: -5px;
-    width: 11px;
-    height: 11px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-#projetos .nav-dots .nav-dot:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#projetos input#img-1:checked ~ .nav-dots label#img-dot-1,
-#projetos input#img-2:checked ~ .nav-dots label#img-dot-2,
-#projetos input#img-3:checked ~ .nav-dots label#img-dot-3,
-#projetos input#img-4:checked ~ .nav-dots label#img-dot-4 {
-    background: rgba(0, 0, 0, 0.8);
-}
-
 
 #certificacao {
     width: 58%;
-    height: 200px;
-	position: absolute;
-	top: 55%;
-	left: 35%;
-    margin: 0 auto 2%;
+    height: auto;
     background-color: rgba(2, 19, 43, 0.804);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
 
-#skill {
-    width: 25%;
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    width: 45%; /* Adjusted to fit two columns with some space between */
+    margin: 10px 2.5%; /* Added margin to space out the columns */
+}
+
+.skillbar-bar:before {
+    background: #111;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.skillbar-bar {
+    height: 3px;
+    width: 0px;
+    background: #ccc;
+    transition-property: width, background-color;
+}
+
+.skillbar-title {
+    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.skill-bar-percent {
+    float: right;
+    display: inline-block;
+    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+
+
+#projetos {
+    width: 85%;
     height: 400px;
-	position: absolute;
-	top: 85%;
-	left: 8%;
-    margin: 0 auto 2%;
-    background-color: rgba(2, 19, 43, 0.804);
+    position: absolute;
+    top: 100%;
+    background-color: rgba(24, 68, 134, 0.508);
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
 }
 
 
+img {
+  max-width: 100%;
+  border: 0px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #e73700;
+}
+h2 {
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 36px;
+}
+button {
+  outline: none !important;
+}
+/******* Common Element CSS End *********/
+
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
+}
+
+/******* Middle section CSS Start ******/
+/* -------- Landing page ------- */
+.game-section {
+  padding: 60px 50px;
+}
+.game-section .owl-stage {
+  margin: 15px 0;
+  display: flex;
+  display: -webkit-flex;
+}
+.game-section .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.game-section .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.game-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.game-section .item-desc {
+  padding: 0 24px 12px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.game-section .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.game-section .item.active .item-desc p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.game-section .owl-theme.custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
+}
+/******** Middle section CSS End *******/
+
+/***** responsive css Start ******/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .game-section .item.active {
+    width: 400px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 50px 30px 40px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .game-section .item.active {
+    width: 360px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .line-title {
+    width: 250px;
+  }
+
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 30px 15px 20px;
+  }
+  .game-section .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .game-section .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .game-section .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}

@@ -10,89 +10,122 @@
 </head>
 
 <body>
-    <div id="capa">
-        <img src="/static/img/capa-portifolio.jpg" alt="Descrição da imagem">
-    </div>
-
-    <div id="subcapa">
-        <img src="/static/img/img-perfil.png" alt="Descrição da imagem">
-        <h2>Gustavo Allify</h2>
-        <p>Analista de BI | Data Analytics | Data Science | Python Developer </p>
-    </div>
-
-    
 <div id="large-header" class="large-header">
     <canvas id="demo-canvas"></canvas>
 </div>
 
-
-<div id="sobre">
+<div id="capa">
+    <img src="/static/img/capa-portifolio.jpg" alt="Descrição da imagem">
 </div>
 
-<div id="projetos">
-    <ul class="slides">
-        <input type="radio" name="radio-btn" id="img-1" checked />
-        <li class="slide-container">
-            <div class="slide">
-                <img src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" />
-            </div>
-            <div class="nav">
-                <label for="img-4" class="prev">&#x2039;</label>
-                <label for="img-2" class="next">&#x203a;</label>
-            </div>
-        </li>
-
-        <input type="radio" name="radio-btn" id="img-2" />
-        <li class="slide-container">
-            <div class="slide">
-                <img src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" />
-            </div>
-            <div class="nav">
-                <label for="img-1" class="prev">&#x2039;</label>
-                <label for="img-3" class="next">&#x203a;</label>
-            </div>
-        </li>
-
-        <input type="radio" name="radio-btn" id="img-3" />
-        <li class="slide-container">
-            <div class="slide">
-                <img src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" />
-            </div>
-            <div class="nav">
-                <label for="img-2" class="prev">&#x2039;</label>
-                <label for="img-4" class="next">&#x203a;</label>
-            </div>
-        </li>
-
-        <input type="radio" name="radio-btn" id="img-4" />
-        <li class="slide-container">
-            <div class="slide">
-                <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
-            </div>
-            <div class="nav">
-                <label for="img-3" class="prev">&#x2039;</label>
-                <label for="img-1" class="next">&#x203a;</label>
-            </div>
-        </li>
-
-        <li class="nav-dots">
-            <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-            <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-            <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-            <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-        </li>
-    </ul>
+<div id="subcapa">
+    <img src="/static/img/img-perfil.png" alt="Descrição da imagem">
+    <h2>Gustavo Allify</h2>
+    <p>Analista de BI | Data Analytics | Data Science | Python Developer </p>
 </div>
 
-<div id="skills">
-</div>
+<body>
+    <div class="container">
+        <div id="sobre">
+            <h2 class="sobre-title">SOBRE</h2>
+            <p class="sobre-text">Eu sou um cientista de dados com experiência em análise de dados, machine learning e visualização de dados. Tenho habilidades em Python, R, SQL e ferramentas de visualização como Tableau e Power BI. Tenho paixão por transformar dados em insights acionáveis.</p>
+        </div>
+        <div id="certificacao">
+            <h2 class="title">Habilidades</h2>
+            <div class="wrapper">
+                <div class="skillbar" data-percent="55%">
+                    <div class="skillbar-title">Web Design</div>
+                    <div class="skill-bar-percent">55%</div>
+                    <div class="skillbar-bar" style="width: 55%;"></div>
+                </div>
+                <div class="skillbar" data-percent="80%">
+                    <div class="skillbar-title">Development</div>
+                    <div class="skill-bar-percent">80%</div>
+                    <div class="skillbar-bar" style="width: 80%;"></div>
+                </div>
+                <div class="skillbar" data-percent="40%">
+                    <div class="skillbar-title">Photography</div>
+                    <div class="skill-bar-percent">40%</div>
+                    <div class="skillbar-bar" style="width: 40%;"></div>
+                </div>
+                <div class="skillbar" data-percent="70%">
+                    <div class="skillbar-title">Branding</div>
+                    <div class="skill-bar-percent">70%</div>
+                    <div class="skillbar-bar" style="width: 70%;"></div>
+                </div>
+                <div class="skillbar" data-percent="65%">
+                    <div class="skillbar-title">Data Analysis</div>
+                    <div class="skill-bar-percent">65%</div>
+                    <div class="skillbar-bar" style="width: 65%;"></div>
+                </div>
+                <div class="skillbar" data-percent="90%">
+                    <div class="skillbar-title">Machine Learning</div>
+                    <div class="skill-bar-percent">90%</div>
+                    <div class="skillbar-bar" style="width: 90%;"></div>
+                </div>
+                <div class="skillbar" data-percent="75%">
+                    <div class="skillbar-title">Python</div>
+                    <div class="skill-bar-percent">75%</div>
+                    <div class="skillbar-bar" style="width: 75%;"></div>
+                </div>
+                <div class="skillbar" data-percent="50%">
+                    <div class="skillbar-title">SQL</div>
+                    <div class="skill-bar-percent">50%</div>
+                    <div class="skillbar-bar" style="width: 50%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-<div id="certificacao">
-</div>
-
-<div id="skill">
-</div>
+    <section class="game-section">
+        <h2 class="line-title">trending games</h2>
+        <div class="owl-carousel custom-carousel owl-theme">
+          <div class="item active" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg);">
+            <div class="item-desc">
+              <h3>Dota 2</h3>
+              <p>Dota 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/winter-3.jpg);">
+            <div class="item-desc">
+              <h3>The Witcher 3</h3>
+              <p>The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel to Defense
+                of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/rdr-2.jpg);">
+            <div class="item-desc">
+              <h3>RDR 2</h3>
+              <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/pubg.jpg);">
+            <div class="item-desc">
+              <h3>PUBG Mobile</h3>
+              <p>PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/fortnite.jpg);">
+            <div class="item-desc">
+              <h3>Fortnite</h3>
+              <p>Battle royale where 100 players fight to be the last person standing. which was a community-created mod
+                for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/far-cry-5.jpg);">
+            <div class="item-desc">
+              <h3>Far Cry 5</h3>
+              <p>Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft.
+                which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    
 
     <script src="/static/js/script_index.js"></script>
 </body>
