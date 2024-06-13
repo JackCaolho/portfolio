@@ -186,33 +186,25 @@
 
 
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    function initCarousel(carouselId, prevButtonId, nextButtonId) {
-      const carousel = document.getElementById(carouselId);
-      const items = carousel.querySelectorAll('.carousel-item');
-      let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    // Função para inicializar cada carrossel
+    function initCarousel(containerId, prevBtnId, nextBtnId) {
+      const prevBtn = document.getElementById(prevBtnId);
+      const nextBtn = document.getElementById(nextBtnId);
+      const items = document.querySelectorAll(`#${containerId} .carousel-item`);
+      let currentItem = 0;
   
-      function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      function showItem(index) {
+        items[currentItem].classList.remove('active');
+        currentItem = (index + items.length) % items.length;
+        items[currentItem].classList.add('active');
       }
   
-      document.getElementById(prevButtonId).addEventListener('click', function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
-        updateCarousel();
-      });
-  
-      document.getElementById(nextButtonId).addEventListener('click', function() {
-        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
-        updateCarousel();
-      });
+      prevBtn.addEventListener('click', () => showItem(currentItem - 1));
+      nextBtn.addEventListener('click', () => showItem(currentItem + 1));
     }
   
-    // Initialize the first carousel
-    initCarousel('carousel-1', 'carousel-prev-1', 'carousel-next-1');
-  
-    // Initialize the second carousel
-    initCarousel('carousel-2', 'carousel-prev-2', 'carousel-next-2');
+    // Inicializar os carrosseis
+    initCarousel('carousel-1', 'prevBtn-1', 'nextBtn-1');
+    initCarousel('carousel-2', 'prevBtn-2', 'nextBtn-2');
   });
-  
