@@ -251,9 +251,12 @@ body {
 }
 
 
-
-
-
+/* Estilo para a linha separadora */
+.content-separator {
+  height: 360px; /* Altura da linha de separação */
+  background-color:transparent; /* Cor da linha de separação (branca, como sugerido) */
+  margin-top: 20px; /* Espaço entre a linha e o conteúdo acima */
+}
 
 
 
@@ -450,7 +453,7 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   transition: background-color var(--trans-dur), box-shadow var(--trans-dur);
   border-radius: 20px;
-  overflow: hidden;
+  overflow:hidden
 }
 
 
@@ -459,6 +462,8 @@ body {
   background-color: rgba(1, 8, 19, 0.555);
   padding: 20px;
   border-right: 1px solid #ddd;
+  overflow-y: auto;
+  max-height: 465px;
 }
 
 .carousel-caption h3 {
