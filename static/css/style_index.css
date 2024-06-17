@@ -71,7 +71,7 @@ body {
   height: 100%;
   background-color: transparent;
   border-radius: 20px;
-  object-fit:fill
+  object-fit:cover
   
 }
 
