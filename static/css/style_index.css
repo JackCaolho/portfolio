@@ -84,7 +84,7 @@ body {
 
 #subcapa img {
   width: 11vw;
-  height: auto;
+  height: 10vw;
   position: absolute;
   top: 50%;
   left: 8%;
@@ -144,7 +144,7 @@ body {
   background-color: rgba(1, 8, 19, 0.555);
   padding: 2%;
   border-right: 1px solid #ddd;
-  max-height: 50vh;
+  max-height: 70vh;
   overflow-y: auto; /* Barra de rolagem vertical quando necessário */
 
 }
@@ -229,9 +229,8 @@ body {
 }
 
 
-/* Estilo para a linha separadora */
 .content-separator {
-  height: 360px; /* Altura da linha de separação */
+  height: 50vh; /* Altura da linha de separação */
   background-color:transparent; /* Cor da linha de separação (branca, como sugerido) */
   margin-top: 20px; /* Espaço entre a linha e o conteúdo acima */
 }
@@ -244,7 +243,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 85%;
+  width: 85vw;
   margin: 20px auto;
   background-color: hsla(var(--hue), 90%, 10%, 0.05);
   backdrop-filter: blur(24px);
@@ -256,7 +255,7 @@ body {
 }
 
 .contato {
-  flex: 0 0 25%;
+  flex: 0 0 23vw;
   background-color: rgba(1, 8, 19, 0.555);
   padding: 20px;
   border-right: 1px solid #ddd;
